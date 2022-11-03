@@ -1,4 +1,4 @@
-
+(function() {
 const RESULT_VALUES = {
   w: 3,
   d: 1,
@@ -50,3 +50,4 @@ orderTeams(
 // should log the following to the console:
 // Sounders: 7
 // Galaxy: 4
+})()
