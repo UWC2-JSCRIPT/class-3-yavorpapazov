@@ -6,7 +6,7 @@
 // Returns true if valid, false if not valid
 
 function testPhoneNumber(str) {
-    let testRegex = /^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}$/
+    let testRegex = /^(\(\d{3}\)|\d{3})[-\s]\d{3}[-\s]\d{4}$/
     return testRegex.test(str)
 }
 
@@ -36,6 +36,7 @@ console.log(testPhoneNumber('(206) 33-4444')); // should return false, missing a
 function parsePhoneNumber(str) {
     let testRegex = /^\(?(\d{3})\)?[-\s](\d{3})[-\s](\d{4})$/
     let arr = testRegex.exec(str)
+    console.log(arr)
     return {areaCode: arr[1], phoneNumber: `${arr[2]}${arr[3]}`}
 }
 
